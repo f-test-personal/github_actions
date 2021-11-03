@@ -16,7 +16,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: login-to-docker
-        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com --username f-test-personal --password-stdin
+        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com --username hoge --password-stdin
         # run: docker login docker.pkg.github.com --username hidehito-f-personal --password ${{secrets.GITHUB_TOKEN}}
       - name: build-and-push-image
         run: | 
