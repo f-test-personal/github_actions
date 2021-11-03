@@ -29,3 +29,5 @@ jobs:
           # pattern2
           # docker build -t docker.pkg.github.com/f-test-personal/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}} ./  
           # docker push docker.pkg.github.com/f-test-personal/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}  #作成不可能（エラー）
+      - name: pull-image
+        run: docker pull docker.pkg.github.com/${{github.repository_owner}}/github_actions/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
