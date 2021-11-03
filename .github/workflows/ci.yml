@@ -1,0 +1,23 @@
+name: GitHub Actions Demo
+on: 
+  # pull_request:
+  push:
+  
+  workflow_dispatch:
+env: 
+  IMAGE_NAME: "hoge"
+  IMAGE_TAG: "piyo"
+
+jobs:
+  push-image: 
+    name: push-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: login-to-docker
+        run: docker login docker.pkg.github.com --username hidehito-f-personal --password ${{secrets.GITHUB_TOKEN}}
+      - name: build-and-push-image
+        run: | 
+          docker build -t docker.pkg.github.com/${{github.repository}}/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}} ./ 
+          docker push docker.pkg.github.com/${{github.repository}}/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
