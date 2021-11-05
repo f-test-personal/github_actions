@@ -12,7 +12,14 @@ jobs:
   push-image: 
     name: push-image
     runs-on: ubuntu-latest
+    container:
+      image: alpime:3.14.2
     steps:
+      - name: temporary
+        run: |
+          apk add git 
+          git config --global http.sslverify false]
+          apk add docker
       - name: checkout
         uses: actions/checkout@v2
       - name: login-to-docker
