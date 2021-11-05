@@ -18,7 +18,7 @@ jobs:
       - name: temporary
         run: |
           apk add git 
-          git config --global http.sslverify false]
+          git config --global http.sslverify false
           apk add docker
       - name: checkout
         uses: actions/checkout@v2
