@@ -13,7 +13,7 @@ jobs:
     name: push-image
     runs-on: ubuntu-latest
     container:
-      image: alpime:3.14.2
+      image: alpine:3.14.2
     steps:
       - name: temporary
         run: |
