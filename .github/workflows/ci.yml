@@ -20,6 +20,7 @@ jobs:
           apk add git 
           git config --global http.sslverify false
           apk add docker
+          find "hogehoge"
       - name: checkout
         uses: actions/checkout@v2
       - name: login-to-docker
