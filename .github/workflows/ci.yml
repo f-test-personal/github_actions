@@ -12,9 +12,6 @@ jobs:
   push-image: 
     name: push-image
     runs-on: ubuntu-latest
-#     defaults:
-#       run:
-#         shell: bash
     container:
       image: alpine:3.14.2
     steps:
@@ -40,7 +37,7 @@ jobs:
       image: alpine:3.14.2
     steps:
       - name: temporary2
-      - run: 
+        run: 
           case "${{env.IMAGE_NAME}}" in 
               "hoge")
                 echo "hoge" 
