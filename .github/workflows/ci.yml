@@ -19,5 +19,5 @@ jobs:
         run: |
           if ${{env.IMAGE_NAME}}=="hoge"
           then echo "hoge"
-          [else echo "hoge"]
+          else echo "hogehoge"
           fi
