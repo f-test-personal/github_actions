@@ -17,7 +17,8 @@ jobs:
     steps:
       - name: temporary
         run: |
-          if [ "${{env.IMAGE_NAME}}" == "hoge" ]
+          # if [ "${{env.IMAGE_NAME}}" == "hoge" ]
+          if [ "${{env.IMAGE_NAME}}" =~ ^hoge.*$ ]
           then
               echo "hoge"
           else
