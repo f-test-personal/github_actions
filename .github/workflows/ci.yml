@@ -12,11 +12,18 @@ jobs:
   push-image: 
     name: push-image
     runs-on: ubuntu-latest
+#     defaults:
+#       run:
+#         shell: bash
     container:
       image: alpine:3.14.2
     steps:
       - name: temporary
         run: |
+          apk add bash
+      - name: temporary2
+        run: |
+          shell: bash
           # if [ "${{env.IMAGE_NAME}}" == "hoge" ]
           if [ "${{env.IMAGE_NAME}}" =~ ^hoge.*$ ]
           then
