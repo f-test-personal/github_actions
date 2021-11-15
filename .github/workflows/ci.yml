@@ -39,7 +39,7 @@ jobs:
       - name: temporary2
         run: 
           case "${{env.IMAGE_NAME}}" in 
-              "hoge")
+              "^hoge.*$")
                 echo "hoge" 
                 ;;
               *)
