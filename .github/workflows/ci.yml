@@ -55,10 +55,16 @@ jobs:
     steps:
       - name: temporary3
         run: 
-          if [ "${{env.IMAGE_NAME}}" = ^hoge.*$" ]; then
+#           if [ "${{env.IMAGE_NAME}}" = ^hoge.*$" ]; then
+#               echo "hoge"
+#           else
+#               echo "piyo"
+#           fi
+          if [ "${{env.IMAGE_NAME}}" = {^hoge.*$} ]
+          then
               echo "hoge"
           else
-              echo "piyo"
+              echo "hogehoge"
           fi
 
 #   push-image2: 
