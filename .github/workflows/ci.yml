@@ -5,7 +5,7 @@ on:
   
   workflow_dispatch:
 env: 
-  IMAGE_NAME: "hoge"
+  IMAGE_NAME: "hogepiyo"
   IMAGE_TAG: "piyo"
 
 jobs:
