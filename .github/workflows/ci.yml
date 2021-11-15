@@ -47,7 +47,19 @@ jobs:
                 ;;
           esac
 
-
+  push-image3: 
+    name: push-image3
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.14.2
+    steps:
+      - name: temporary3
+        run: 
+          if [ "${{env.IMAGE_NAME}}" = ^hoge.*$" ]; then
+              echo "hoge"
+          else
+              echo "piyo"
+          fi
 
 #   push-image2: 
 #     name: push-image
