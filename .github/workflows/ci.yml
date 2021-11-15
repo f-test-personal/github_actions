@@ -5,7 +5,7 @@ on:
   
   workflow_dispatch:
 env: 
-  IMAGE_NAME: "hogepiyo"
+  IMAGE_NAME: "hogeee"
   IMAGE_TAG: "piyo"
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
         shell: bash
         run: |
           # if [ "${{env.IMAGE_NAME}}" == "hoge" ]
-          if [ "${{env.IMAGE_NAME}}" =~ ^hoge.*$ ]
+          if [ ${{env.IMAGE_NAME}} =~ hoge*$ ]
           then
               echo "hoge"
           else
