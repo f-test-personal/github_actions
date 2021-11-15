@@ -55,8 +55,7 @@ jobs:
     steps:
       - name: temporary3
         run: 
-          if [ "${{env.IMAGE_NAME}}" = ${^hoge.*$} ]
-          then
+          if [ "${{env.IMAGE_NAME}}" = ${^hoge.*$} ]; then
               echo "hoge"
           else
               echo "hogehoge"
