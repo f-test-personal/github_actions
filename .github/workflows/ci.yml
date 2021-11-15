@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: temporary
         run: |
-          if 10==10
+          if ${{env.IMAGE_NAME}}=="hoge"
           then echo "hoge"
           [else echo "hoge"]
           fi
