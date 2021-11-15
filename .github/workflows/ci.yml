@@ -1,14 +1,14 @@
 name: GitHub Actions Demo
 on: 
-  # pull_request:
   push:
   
-  workflow_dispatch:
 env: 
   IMAGE_NAME: "hogeee"
   IMAGE_TAG: "piyo"
 
 jobs:
+# use bash, use bash regular expression
+# success
   push-image: 
     name: push-image
     runs-on: ubuntu-latest
@@ -21,7 +21,6 @@ jobs:
       - name: temporary2
         shell: bash
         run: |
-          # if [ "${{env.IMAGE_NAME}}" == "hoge" ]
           if [[ ${{env.IMAGE_NAME}} =~ hoge*$ ]]; then
             echo "hoge"
           else
@@ -30,6 +29,8 @@ jobs:
           
           
   push-image2: 
+  # use ash/sh, use case, use regular expression
+  # failure
     name: push-image2
     runs-on: ubuntu-latest
     container:
@@ -47,6 +48,8 @@ jobs:
           esac
 
   push-image3: 
+    # use ash/sh, use regular expression, use ${}
+    # failure
     name: push-image3
     runs-on: ubuntu-latest
     container:
@@ -59,19 +62,4 @@ jobs:
           else
               echo "hogehoge"
           fi
-
-#   push-image2: 
-#     name: push-image
-#     runs-on: ubuntu-latest
-#     container:
-#       image: alpine:3.14.2
-#     steps:
-#       - name: temporary2
-#       - run: |
-#         if [ expr "${{env.IMAGE_NAME}}" : "^hoge.*$" >/dev/null ] 
-#         then
-#             echo "hoge" 
-#         else 
-#             echo "hogehoge"
-#         fi
 
