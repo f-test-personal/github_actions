@@ -31,23 +31,37 @@ jobs:
           else
               echo "hogehoge"
           fi
-
+          
+          
   push-image2: 
-    name: push-image
+    name: push-image2
     runs-on: ubuntu-latest
     container:
       image: alpine:3.14.2
     steps:
       - name: temporary2
       - run: |
-        if [ expr "${{env.IMAGE_NAME}}" : "^hoge.*$" >/dev/null ] 
-        then
-            echo "hoge" 
-        else 
-            echo "hogehoge"
-        fi
-if expr "$input" : "[0-9]*$" >&/dev/null;then
-  echo "$input is a number"
-else
-  echo "$input is not a number"
-fi
+          case "${{env.IMAGE_NAME}}" in 
+            "hoge")
+              echo "hoge" 
+            *)
+              echo "hogehoge"
+          esac
+
+
+
+#   push-image2: 
+#     name: push-image
+#     runs-on: ubuntu-latest
+#     container:
+#       image: alpine:3.14.2
+#     steps:
+#       - name: temporary2
+#       - run: |
+#         if [ expr "${{env.IMAGE_NAME}}" : "^hoge.*$" >/dev/null ] 
+#         then
+#             echo "hoge" 
+#         else 
+#             echo "hogehoge"
+#         fi
+
