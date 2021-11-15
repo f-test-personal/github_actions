@@ -22,11 +22,10 @@ jobs:
         shell: bash
         run: |
           # if [ "${{env.IMAGE_NAME}}" == "hoge" ]
-          if [ ${{env.IMAGE_NAME}} =~ hoge*$ ]
-          then
-              echo "hoge"
+          if [[ ${{env.IMAGE_NAME}} =~ hoge*$ ]]; then
+            echo "hoge"
           else
-              echo "hogehoge"
+            echo "hogehoge"
           fi
           
           
