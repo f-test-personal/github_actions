@@ -30,7 +30,7 @@ jobs:
           
   push-image2: 
   # use ash/sh, use case, use regular expression
-  # failure
+  # success
     name: push-image2
     runs-on: ubuntu-latest
     container:
