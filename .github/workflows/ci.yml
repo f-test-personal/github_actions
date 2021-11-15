@@ -41,8 +41,10 @@ jobs:
           case "${{env.IMAGE_NAME}}" in 
               "hoge")
                 echo "hoge" 
+                ;;
               *)
                 echo "hogehoge"
+                ;;
           esac
 
 
