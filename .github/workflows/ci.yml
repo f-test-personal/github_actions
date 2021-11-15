@@ -22,8 +22,8 @@ jobs:
         run: |
           apk add bash
       - name: temporary2
+        shell: bash
         run: |
-          shell: bash
           # if [ "${{env.IMAGE_NAME}}" == "hoge" ]
           if [ "${{env.IMAGE_NAME}}" =~ ^hoge.*$ ]
           then
