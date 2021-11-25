@@ -17,3 +17,13 @@ jobs:
       - name: temporary
         run: |
           hoge
+          
+  push-image2: 
+    name: push-image2
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.14.2
+    steps:
+      - name: temporary
+        run: |
+          piyo
