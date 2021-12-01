@@ -1,6 +1,5 @@
 name: GitHub Actions Demo
 on: 
-  # pull_request:
   push:
   
   workflow_dispatch:
@@ -9,33 +8,35 @@ env:
   IMAGE_TAG: "piyo"
 
 jobs:
-  push-image: 
-    name: push-image
+  test1:
+    name: test1
     runs-on: ubuntu-latest
     container:
       image: alpine:3.14.2
     steps:
       - name: temporary
         run: |
-          apk add git 
-          git config --global http.sslverify false
-          apk add docker
-          find "hogehoge"
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: login-to-docker
-        run: | 
-          echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com --username hoge --password-stdin
-          echo ${{ github.repository_owner}}
-        # run: docker login docker.pkg.github.com --username hidehito-f-personal --password ${{secrets.GITHUB_TOKEN}}
-      - name: build-and-push-image
-        run: | 
-          # pattern1
-          docker build -t docker.pkg.github.com/${{github.repository}}/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}} ./  
-          docker push docker.pkg.github.com/${{github.repository}}/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}} #f-test-personal/github_actionsに作成される
+          echo "hogehoge"
           
-          # pattern2
-          # docker build -t docker.pkg.github.com/f-test-personal/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}} ./  
-          # docker push docker.pkg.github.com/f-test-personal/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}  #作成不可能（エラー）
-      - name: pull-image
-        run: docker pull docker.pkg.github.com/${{github.repository_owner}}/github_actions/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
+  test2:
+    name: test2
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.14.2
+    if: startsWith(github.ref, 'regs/heads/hogehoge-')
+    steps:
+      - name: temporary
+        run: |
+          echo "hogehoge"
+
+
+  test3:
+    name: test3
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.14.2
+    if: startsWith(github.ref, 'regs/heads/hogehoge-')
+    steps:
+      - name: temporary
+        run: |
+          echo "hogehoge"
