@@ -16,18 +16,18 @@ jobs:
     steps:
       - name: temporary
         run: |
-          echo "hogehoge"
+          echo "piyo"
           
   test2:
     name: test2
     runs-on: ubuntu-latest
     container:
       image: alpine:3.14.2
-    if: startsWith(github.ref, 'regs/heads/hogehoge-')
+    if: startsWith(github.ref, 'regs/heads/hoge-')
     steps:
       - name: temporary
         run: |
-          echo "hogehoge"
+          echo "piyo"
 
 
   test3:
@@ -35,8 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: alpine:3.14.2
-    if: startsWith(github.ref, 'regs/heads/hogehoge-')
+    if: startsWith(github.ref, 'regs/heads/hoge-')
     steps:
       - name: temporary
         run: |
-          echo "hogehoge"
+          echo "piyo"
