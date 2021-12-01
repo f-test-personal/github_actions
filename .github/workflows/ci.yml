@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: temporary
         run: |
-          echo "hogehoge"
+          echo "piyo"
           
   test2:
     name: test2
@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: temporary
         run: |
-          echo "hogehoge"
+          echo "piyo"
 
 
   test3:
@@ -39,4 +39,4 @@ jobs:
     steps:
       - name: temporary
         run: |
-          echo "hogehoge"
+          echo "piyo"
