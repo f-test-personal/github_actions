@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 env: 
   IMAGE_NAME: "hoge"
-  IMAGE_TAG: "piyo"
+  IMAGE_TAG: "piyofuga"
 
 jobs:
   push-image: 
