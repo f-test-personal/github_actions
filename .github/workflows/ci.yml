@@ -31,7 +31,7 @@ jobs:
         run: | 
           # pattern1
           docker build -t docker.pkg.github.com/${{github.repository}}/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}} ./  
-          docker push docker.pkg.github.com/${{github.repository}}/repositorydayo/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}} #f-test-personal/github_actionsに作成される
+          docker push docker.pkg.github.com/${{github.repository}}/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}} #f-test-personal/github_actionsに作成される
           
 #       - name: pull-image
 #         run: docker pull docker.pkg.github.com/${{github.repository_owner}}/github_actions/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
