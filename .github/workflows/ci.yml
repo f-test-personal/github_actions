@@ -18,3 +18,5 @@ jobs:
       - name: temporary
         run: |
           echo ${{github.repository}}
+          echo ${GITHUB_REF#refs/heads/}
+         
