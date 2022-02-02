@@ -17,8 +17,4 @@ jobs:
     steps:
       - name: temporary
         run: |
-          apk add git 
-          git config --global http.sslverify false
-          apk add docker
-          find "hogehoge"
           echo ${{github.repository}}
