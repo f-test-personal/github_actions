@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: temporary
         run: |
-          echo "hoge"
+          echo "hogehoge"
 
   job2: 
     name: job2
