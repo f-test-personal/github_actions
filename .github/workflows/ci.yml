@@ -1,9 +1,9 @@
 name: GitHub Actions Demo
 on: 
-  push:
-#   pull_request:
-#     branches:
-#       - develop
+  pull_request:
+    branches:
+      - develop
+
   
   
   workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: temporary
         run: |
-          echo "hoge"
+          echo "hogehoge"
 
   job2: 
     name: job2
