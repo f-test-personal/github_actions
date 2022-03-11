@@ -15,3 +15,5 @@ jobs:
           apk list --installed
           echo "fugafuga"
           apk -L info
+          echo "piyopiyo"
+          apk info -vv | sort
