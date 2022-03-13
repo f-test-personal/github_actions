@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: temporary
         run: |
+          apt-get update
+          apt-get install -y sudo
           sudo pip show
           sudo pip install numpy
           
