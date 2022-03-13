@@ -29,7 +29,10 @@ jobs:
       - name: temporary
         run: |
           apt-get update
+          echo "hoge"
           apt-get install -y sudo
+          echo "hoge"
           sudo pip show
+          echo "hoge"
           sudo pip install numpy
           
