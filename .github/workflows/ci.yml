@@ -28,5 +28,6 @@ jobs:
     steps:
       - name: temporary
         run: |
-          pip show
+          sudo pip show
+          sudo pip install numpy
           
