@@ -3,6 +3,7 @@ on:
   push:
 
 jobs:
+# check os package dependencies
   job1: 
     name: job1
     runs-on: ubuntu-latest
@@ -17,3 +18,18 @@ jobs:
           apk -L info
           echo "piyopiyo"
           apk info -vv | sort
+          
+# check os package dependencies
+  job2: 
+    name: job2
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.15.0
+    steps:
+      - name: temporary
+        run: |
+          apk update
+          apk add sudo
+          apk add --update py-pip
+          pip install numpy
+          
