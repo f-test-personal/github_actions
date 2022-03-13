@@ -30,6 +30,6 @@ jobs:
         run: |
           apk update
           apk add sudo
-          apk add python3
+          apk add python3 gcc musl-dev python3-dev libffi-dev openssl-dev
           pip3 install numpy
           
