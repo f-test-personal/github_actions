@@ -19,7 +19,7 @@ jobs:
           echo "piyopiyo"
           apk info -vv | sort
           
-# check os package dependencies
+# check language package dependencies
   job2: 
     name: job2
     runs-on: ubuntu-latest
