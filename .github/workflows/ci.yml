@@ -16,7 +16,7 @@ jobs:
           apk list --installed
           echo "fugafuga"
           apk -L info
-          echo "piyopiyo"
+          echo "piyopiyohoge"
           apk info -vv | sort
           
 # check language package dependencies
