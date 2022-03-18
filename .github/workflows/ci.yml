@@ -34,6 +34,20 @@ jobs:
           pip list
           echo "hoge"
           pip freeze
-          
+
+  job3: 
+    name: job3
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.15.0
+    steps:
+      - name: temporary
+        run: |
+          echo "list installed packages"
+          apk list --installed
+          echo "list installed packages"
+          apk -L info
+          echo "install jdk"
+          apk add openjdk11
           
           
