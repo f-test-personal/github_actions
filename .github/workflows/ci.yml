@@ -49,5 +49,7 @@ jobs:
           apk -L info
           echo "install jdk"
           apk add openjdk11
+          echo "list installed packages"
+          apk -L info          
           
           
