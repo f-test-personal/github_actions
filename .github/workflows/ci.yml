@@ -74,3 +74,13 @@ jobs:
           echo "list installed packages"
           apt list --installed
 
+  job6:
+    name: job6
+    runs-on: ubuntu-latest
+    container:
+      image: debian:11
+    steps:
+      - name: temporary
+        run: |
+          echo "list installed packages"
+          apt list --installed
