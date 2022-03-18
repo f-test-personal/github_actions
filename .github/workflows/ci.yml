@@ -52,4 +52,13 @@ jobs:
           echo "list installed packages"
           apk -L info          
           
-          
+  job4:
+    name: job4
+    runs-on: ubuntu-latest
+    container:
+      image: openjdk:11-jre-slim-buster
+    steps:
+      - name: temporary
+        run: |
+          echo "list installed packages"
+          apt list --installed
