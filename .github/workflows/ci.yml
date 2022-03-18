@@ -50,7 +50,7 @@ jobs:
           echo "install jdk"
           apk add openjdk11
           echo "list installed packages"
-          apk -L info          
+          apk -L info | sort          
           
   job4:
     name: job4
