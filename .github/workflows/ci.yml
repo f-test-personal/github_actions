@@ -51,7 +51,22 @@ jobs:
           apk add openjdk11
           echo "list installed packages with openjdk"
           apk -L info | sort          
-          
+
+  job3-1: 
+    name: job3-1
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.15.0
+    steps:
+      - name: temporary
+        run: |
+          apk update
+          echo "list installed packages"
+          apk list --installed
+          echo "list installed packages"
+          apk -L info | sort    
+
+
   job4:
     name: job4
     runs-on: ubuntu-latest
