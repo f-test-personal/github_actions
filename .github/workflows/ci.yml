@@ -99,3 +99,20 @@ jobs:
         run: |
           echo "list installed packages"
           apt list --installed
+
+  job7:
+    name: job7
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.15.1
+    steps:
+      - name: temporary
+        run: |
+          echo "list installed packages"
+          apk list --installed
+          echo "list installed packages"
+          apk -L info
+          echo "install git"
+          apk add git
+          echo "list installed packages with openjdk"
+          apk -L info | sort 
