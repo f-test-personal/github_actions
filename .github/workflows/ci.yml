@@ -62,7 +62,7 @@ jobs:
         run: |
           apk update
           echo "list installed packages"
-          apk list --installed
+          apk list --installed | sort
           echo "list installed packages"
           apk -L info | sort    
 
@@ -109,9 +109,9 @@ jobs:
       - name: temporary
         run: |
           echo "list installed packages"
-          apk list --installed
+          apk list --installed | sort
           echo "list installed packages"
-          apk -L info
+          apk -L info | sort
           echo "install git"
           apk add git
           echo "list installed packages with openjdk"
