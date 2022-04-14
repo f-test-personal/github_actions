@@ -20,8 +20,8 @@ jobs:
           ---
           PyNaCl~=1.3.0
           EOF
-          pip install -r requirement.txt
-          pip list.txt >> list.txt
+          sudo pip install -r requirement.txt
+          sudo pip list.txt >> list.txt
           uniq list.txt
           cat list.txt
           
@@ -39,7 +39,7 @@ jobs:
           ---
           Jinja2~=1.3.0
           EOF
-          pip install -r requirement.txt
-          pip list.txt >> list.txt
+          sudo pip install -r requirement.txt
+          sudo pip list.txt >> list.txt
           uniq list.txt
           cat list.txt          
