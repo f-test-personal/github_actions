@@ -27,6 +27,11 @@ jobs:
           sudo pip list >> list.txt
           # uniq list.txt
           cat list.txt
+          echo "show license"
+          pip show cffi 
+          pip show pycparser
+          pip show six
+          
           
   check-jinja: 
     name: check-jinja
