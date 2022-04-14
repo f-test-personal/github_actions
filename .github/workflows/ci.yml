@@ -54,3 +54,5 @@ jobs:
           sudo pip list >> list.txt
           # uniq list.txt
           cat list.txt          
+          echo "show license"
+          pip show MarkupSafe
