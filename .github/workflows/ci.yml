@@ -24,7 +24,7 @@ jobs:
           # EOF
           # sudo pip install -r requirement.txt
           sudo pip install PyNaCl==1.3.0
-          sudo pip list.txt >> list.txt
+          sudo pip list >> list.txt
           uniq list.txt
           cat list.txt
           
