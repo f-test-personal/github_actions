@@ -18,11 +18,12 @@ jobs:
           apt install sudo
           pip list > list.txt
           echo "instal pynacl"
-          cat <<EOF > requirement.txt
-          ---
-          PyNaCl~=1.3.0
-          EOF
-          sudo pip install -r requirement.txt
+          # cat <<EOF > requirement.txt
+          # ---
+          # PyNaCl~=1.3.0
+          # EOF
+          # sudo pip install -r requirement.txt
+          sudo pip install PyNaCl==1.3.0
           sudo pip list.txt >> list.txt
           uniq list.txt
           cat list.txt
