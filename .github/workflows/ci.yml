@@ -46,6 +46,6 @@ jobs:
           # EOF
           # sudo pip install -r requirement.txt
           sudo pip install Jinja2==2.8.0
-          sudo pip list.txt >> list.txt
+          sudo pip list >> list.txt
           uniq list.txt
           cat list.txt          
