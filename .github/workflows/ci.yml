@@ -16,7 +16,13 @@ jobs:
           cat list.txt
           echo "yum info acl"
           yum info acl.x86_64
-          # echo $SHELL
-          yum list installed |  awk '7<=NR && NR<=184 {print $1}' > hoge.txt
+          yum list installed |  awk '7<=NR && NR<=190 {print $1}' > hoge.txt
           cat hoge.txt
-          # while true
+          cat <<EOF > while.sh
+            #!/bin/bash
+            while read line
+            do
+              yum info $line
+            done < ./hoge.txt
+          EOF
+          sh while.sh
