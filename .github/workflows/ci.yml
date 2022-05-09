@@ -1,9 +1,10 @@
 name: GitHub Actions Demo
 on: 
   push:
-   
-  job3:
-    name: job3
+
+jobs:
+  job1:
+    name: job1
     runs-on: ubuntu-latest
     container:
       image: registry.access.redhat.com/ubi8/ubi:8.5-239
