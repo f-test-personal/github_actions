@@ -22,13 +22,14 @@ jobs:
             #!/bin/bash
             while read line
             do
-              yum info $line | grep Name
+              yum info $line | grep Name >> name.txt
             done < ./hoge.txt
           EOF
-          sh while.sh > name.txt
-      - name: install artifact
-        uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: hoge
-          path: name.txt        
+          sh while.sh 
+          cat name.txt
+#       - name: install artifact
+#         uses: actions/upload-artifact@v2
+#         if: failure()
+#         with:
+#           name: hoge
+#           path: name.txt        
