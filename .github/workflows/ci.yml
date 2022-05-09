@@ -17,5 +17,6 @@ jobs:
           echo "yum info acl"
           yum info acl.x86_64
           # echo $SHELL
-          # yum list installed | awk '{print $1}'
+          yum list installed |  awk '7<=NR && NR<=184 {print $1}' > hoge.txt
+          cat hoge.txt
           # while true
