@@ -12,6 +12,7 @@ jobs:
       - name: check-ubi-package
         run: |
           yum list installed > list.txt
+          echo "cat list.txt"
           cat list.txt
           # yum info acl.x86_64
           # echo $SHELL
