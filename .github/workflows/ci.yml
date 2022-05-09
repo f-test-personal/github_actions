@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: check-ubi-package
         run: |
-          yum list installed
-          yum info acl.x86_64
-          echo $SHELL
+          yum list installed > list.txt
+          # yum info acl.x86_64
+          # echo $SHELL
+          # yum list installed | awk '{print $1}'
+          # while true
