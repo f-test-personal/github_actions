@@ -6,8 +6,8 @@ on:
     name: job3
     runs-on: ubuntu-latest
     container:
-      image: alpine:3.14.2
+      image: registry.access.redhat.com/ubi8/ubi:8.5-239
     steps:
-      - name: temporary
+      - name: check-ubi-package
         run: |
-          echo "fuga"
+          yum list installed
