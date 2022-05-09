@@ -1,38 +1,7 @@
 name: GitHub Actions Demo
 on: 
   push:
-#   pull_request:
-#     branches:
-#       - develop
-  
-  
-  workflow_dispatch:
-  
-env: 
-  IMAGE_NAME: "hoge"
-  IMAGE_TAG: "piyofuga"
-
-jobs:
-  job1: 
-    name: job1
-    runs-on: ubuntu-latest
-    container:
-      image: alpine:3.14.2
-    steps:
-      - name: temporary
-        run: |
-          echo "hoge"
-
-  job2: 
-    name: job2
-    runs-on: ubuntu-latest
-    container:
-      image: alpine:3.14.2
-    steps:
-      - name: temporary
-        run: |
-          echo "piyo"
-          
+   
   job3:
     name: job3
     runs-on: ubuntu-latest
