@@ -13,3 +13,4 @@ jobs:
         run: |
           yum list installed
           yum info acl.x86_64
+          echo $SHELL
