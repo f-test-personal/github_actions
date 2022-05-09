@@ -11,11 +11,6 @@ jobs:
     steps:
       - name: check-ubi-package
         run: |
-          yum list installed > list.txt
-          echo "cat list.txt"
-          cat list.txt
-          echo "yum info acl"
-          yum info acl.x86_64
           yum list installed |  awk '7<=NR && NR<=190 {print $1}' > hoge.txt
           cat hoge.txt
           cat <<EOF > while.sh
