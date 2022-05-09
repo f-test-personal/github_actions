@@ -12,3 +12,4 @@ jobs:
       - name: check-ubi-package
         run: |
           yum list installed
+          yum info acl.x86_64
