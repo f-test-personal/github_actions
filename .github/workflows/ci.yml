@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: check-ubi-package
         run: |
+          yum list installed
           yum list installed |  awk '7<=NR && NR<=190 {print $1}' > hoge.txt
           cat hoge.txt
           yum info acl.x86_64
