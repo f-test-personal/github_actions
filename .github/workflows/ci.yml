@@ -46,4 +46,38 @@ jobs:
           yum info file-libs.x86_64
           yum info filesystem.x86_64
           yum info findutils.x86_64
+          yum info gawk.x86_64
+          yum info gdb-gdbserver.x86_64
+          yum info gdbm.x86_64
+          yum info gdbm-libs.x86_64
+          yum info glib2.x86_64
+          yum info glibc.x86_64
+          yum info glibc-common.x86_64
+          yum info glibc-minimal-langpack.x86_64
+          yum info gmp.x86_64
+          yum info gnupg2.x86_64
+          yum info gnutls.x86_64
+          yum info gobject-introspection.x86_64
+          yum info gpgme.x86_64
+          yum info grep.x86_64
+          yum info gzip.x86_64
+          yum info ima-evm-utils.x86_64
+          yum info info.x86_64
+          yum info json-c.x86_64
+          yum info json-glib.x86_64
+          yum info keyutils-libs.x86_64
+          yum info kmod-libs.x86_64
+          yum info krb5-libs.x86_64
+          yum info langpacks-en.noarch
+          yum info libacl.x86_64
+          yum info libarchive.x86_64
+          yum info libassuan.x86_64
+          yum info libattr.x86_64
+          yum info libblkid.x86_64
+          yum info libcap.x86_64
+          yum info libcap-ng.x86_64
+          yum info libcom_err.x86_64
+          yum info libcomps.x86_64
+          yum info libcurl.x86_64
+          
           
