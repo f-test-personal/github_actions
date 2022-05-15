@@ -34,7 +34,7 @@ jobs:
           yum info dbus-libs.x86_64
           yum info dbus-tools.x86_64
           yum info device-mapper.x86_64
-          yum info adevice-mapper-libs.x86_64
+          yum info device-mapper-libs.x86_64
           yum info dmidecode.x86_64
           yum info dnf.noarch
           yum info dnf-data.noarch
