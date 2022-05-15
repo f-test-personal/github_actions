@@ -16,7 +16,7 @@ jobs:
            yum info python3-chardet.noarch
            yum info python3-cloud-what.x86_64
            yum info python3-dateutil.noarch
-           python3-dbus.x86_64
+           yum info python3-dbus.x86_64
 #           yum list installed
 #           yum list installed |  awk '7<=NR && NR<=190 {print $1}' > hoge.txt
 #           cat hoge.txt
