@@ -23,7 +23,7 @@ jobs:
               # grep URL name.txt >> info.txt
               # grep License name.txt >> info.txt
               # echo " " >> info.txt
-            done < ./hoge.txt
+            done < <./hoge.txt
           EOF
           sh while.sh 
           # cat info.txt 
