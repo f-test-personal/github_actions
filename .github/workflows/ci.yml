@@ -79,5 +79,48 @@ jobs:
           yum info libcom_err.x86_64
           yum info libcomps.x86_64
           yum info libcurl.x86_64
+          yum info libdb.x86_64
+          yum info libdb-utils.x86_64
+          yum info libdnf.x86_64
+          yum info libfdisk.x86_64
+          yum info libffi.x86_64
+          yum info libgcc.x86_64
+          yum info libgcrypt.x86_64
+          yum info libgpg-error.x86_64
+          yum info libksba.x86_64
+          yum info libmodulemd.x86_64
+          yum info libmount.x86_64
+          yum info libnghttp2.x86_64
+          yum info libnl3.x86_64
+          yum info libnsl2.x86_64
+          yum info libpsl.x86_64
+          yum info libpwquality.x86_64
+          yum info librepo.x86_64
+          yum info libreport-filesystem.x86_64
+          yum info librhsm.x86_64
+          yum info libseccomp.x86_64
+          yum info libselinux.x86_64
+          yum info libsemanage.x86_64
+          yum info libsepol.x86_64
+          yum info libsigsegv.x86_64
+          yum info libsmartcols.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
+          yum info libcurl.x86_64
           
           
