@@ -22,6 +22,8 @@ jobs:
           grep Name name.txt >> info.txt
           grep URL name.txt >> info.txt
           grep License name.txt >> info.txt
+          echo " " >> info.txt
+          grep License name.txt >> info.txt
           cat info.txt
           
            
