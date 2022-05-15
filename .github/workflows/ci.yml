@@ -18,8 +18,10 @@ jobs:
           # yum info audit-libs.x86_64
           # yum info basesystem.noarch
           # yum info bash.x86_64
-          touch info.txt
-          yum info audit-libs.x86_64 | sed -n "/Available Packages/q;p" | {grep Name && grep URL} >> info.txt
+          yum info audit-libs.x86_64 | sed -n "/Available Packages/q;p" > name.txt
+          grep Name name.txt >> info.txt
+          grep URL name.txt >> info.txt
+          grep License name.txt >> info.txt
           cat info.txt
           
            
