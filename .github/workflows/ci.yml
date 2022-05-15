@@ -14,11 +14,9 @@ jobs:
           yum list installed
           yum list installed |  awk '7<=NR && NR<=190 {print $1}' > hoge.txt
           cat hoge.txt
-          echo hoge
           cat <<EOF > while.sh
             #!/bin/bash
             while read line
-            echo hoge
             do
               yum info $line | sed -n "/Available Packages/q;p" > name.txt
               grep Name name.txt >> info.txt
@@ -27,6 +25,7 @@ jobs:
               echo " " >> info.txt
             done < ./hoge.txt
           EOF
+          sh while.sh 
           cat info.txt
 #          yum info audit-libs.x86_64 | sed -n "/Available Packages/q;p" > name.txt
 #          grep Name name.txt >> info.txt
