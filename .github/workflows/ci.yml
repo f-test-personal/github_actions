@@ -18,7 +18,7 @@ jobs:
             while read line
             do
               yum info $line | sed -n "/Available Packages/q;p" > name.txt
-              grep hoge hogej.txt
+              hoge ww
               grep Name name.txt >> info.txt
               grep URL name.txt >> info.txt
               grep License name.txt >> info.txt
