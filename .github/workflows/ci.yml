@@ -11,33 +11,26 @@ jobs:
     steps:  
        - name: check-ubi-package
          run: |
-           yum info popt.x86_64
-           yum info publicsuffix-list-dafsa.noarch
-           yum info python3-chardet.noarch
-           yum info python3-cloud-what.x86_64
-           yum info python3-dateutil.noarch
-           yum info python3-dbus.x86_64
-#           yum list installed
-#           yum list installed |  awk '7<=NR && NR<=190 {print $1}' > hoge.txt
-#           cat hoge.txt
-#           cat <<EOF > while.sh
-#             #!/bin/bash
-#             while read line
-#             do
-#               yum info $line | sed -n "/Available Packages/q;p" > name.txt
-#               grep Name name.txt >> info.txt
-#               grep URL name.txt >> info.txt
-#               grep License name.txt >> info.txt
-#               echo " " >> info.txt
-#             done < ./hoge.txt
-#           EOF
-#           sh while.sh 
-# #           cat info.txt 
-#       - name: install artifact
-#         uses: actions/upload-artifact@v2
-#         with:
-#           name: hoge
-#           path: info.txt 
+          yum list installed |  awk '7<=NR && NR<=10 {print $1}' > hoge.txt
+          cat hoge.txt
+          cat <<EOF > while.sh
+            #!/bin/bash
+            while read line
+            do
+              yum info $line | sed -n "/Available Packages/q;p" > name.txt
+              grep Name name.txt >> info.txt
+              grep URL name.txt >> info.txt
+              grep License name.txt >> info.txt
+              echo " " >> info.txt
+            done < ./hoge.txt
+          EOF
+          sh while.sh 
+          cat info.txt 
+       - name: install artifact
+         uses: actions/upload-artifact@v2
+         with:
+           name: hoge
+           path: info.txt 
  
  
 #          yum info audit-libs.x86_64 | sed -n "/Available Packages/q;p" > name.txt
@@ -73,3 +66,11 @@ jobs:
 #         with:
 #           name: hoge
 #           path: hoge.txt   
+
+
+#            yum info popt.x86_64
+#            yum info publicsuffix-list-dafsa.noarch
+#            yum info python3-chardet.noarch
+#            yum info python3-cloud-what.x86_64
+#            yum info python3-dateutil.noarch
+#            yum info python3-dbus.x86_64
