@@ -12,7 +12,7 @@ jobs:
        - name: check-ubi-package
          run: |
           yum list installed |  awk '7<=NR && NR<=10 {print $1}' > hoge.txt
-          # cat hoge.txt
+          cat hoge.txt
           cat <<EOF > while.sh
             #!/bin/bash
             while read line
