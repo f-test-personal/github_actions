@@ -1,0 +1,17 @@
+name: setup_tool
+on: 
+#  push:
+  workflow_dispatch:
+
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    container:
+      image: registry.access.redhat.com/ubi8/ubi:8.5-239
+    steps:
+      - name: check-ubi-package
+        run: |
+          pip help
+      
