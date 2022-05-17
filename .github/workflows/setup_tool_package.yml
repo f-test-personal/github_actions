@@ -13,5 +13,5 @@ jobs:
     steps:
       - name: check-ubi-package
         run: |
-          yum install python38
+          yum install python38 -y
       
