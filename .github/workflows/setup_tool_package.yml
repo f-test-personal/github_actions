@@ -16,7 +16,6 @@ jobs:
           yum install python38 -y
           yum list installed
           python3 -V 
-          python38 -V 
           pip3 info
           # pip help
           # cat <<EOF > requirement.txt
