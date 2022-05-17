@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Setup Tool
 on: 
 #  push:
   workflow_dispatch:
@@ -13,5 +13,5 @@ jobs:
     steps:
       - name: check-ubi-package
         run: |
-          yum info audit-libs
+          pip help
       
