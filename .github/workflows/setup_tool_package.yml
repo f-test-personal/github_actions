@@ -1,4 +1,4 @@
-name: setup_tool
+name: Setup Tool
 on: 
 #  push:
   workflow_dispatch:
