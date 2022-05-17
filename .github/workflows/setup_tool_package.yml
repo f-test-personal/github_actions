@@ -14,4 +14,6 @@ jobs:
       - name: check-ubi-package
         run: |
           yum install python38 -y
+          pip list installed
+          
       
