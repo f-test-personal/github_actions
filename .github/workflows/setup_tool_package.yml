@@ -16,6 +16,7 @@ jobs:
           yum install python38 -y
           yum list installed
           python3 -V 
+          pip3 list installed
           cat <<EOF > requirement.txt
           Jinja2==3.1.2
           MarkupSafe==2.1.1
