@@ -24,7 +24,7 @@ jobs:
           pycparser==2.21
           EOF
           pip3 install -r requirement.txt 
-          pipe list installed
+          pip3 list installed
 
           
       
