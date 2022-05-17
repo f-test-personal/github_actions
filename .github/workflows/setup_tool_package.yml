@@ -15,8 +15,9 @@ jobs:
         run: |
           yum install python38 -y
           yum list installed
-          python -V 
-          python -m pip -V
+          python3 -V 
+          python38 -V 
+          python38-pip
           # pip help
           # cat <<EOF > requirement.txt
           # Jinja2==3.1.2
