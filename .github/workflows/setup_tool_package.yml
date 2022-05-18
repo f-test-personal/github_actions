@@ -26,6 +26,9 @@ jobs:
           EOF
           pip3 install -r requirement.txt 
           pip3 list installed
+          
+          pip3 install ansible
+          pip list installed
 
           
       
