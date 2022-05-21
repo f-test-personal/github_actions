@@ -23,26 +23,6 @@ jobs:
         with:
           name: hoge
           path: hoge.txt
-      - name: info
-        run: |
-          dnf info buildah.x86_64
-          dnf info containers-common.x86_64
-          dnf info criu.x86_64
-          dnf info fuse-overlayfs.x86_64
-          dnf info fuse3.x86_64
-          dnf info fuse3-libs.x86_64
-          dnf info iptables-libs.x86_64
-          dnf info jansson.x86_64
-          dnf info kmod-libs.x86_64
-          dnf info libibverbs.x86_64
-          dnf info libmnl.x86_64
-          dnf info libnet.x86_64
-          dnf info libnftnl.x86_64
-          dnf info libpcap.x86_64
-          dnf info libslirp.x86_64
-          dnf info nftables.x86_64
-          dnf info protobuf-c.x86_64
-          dnf info runc.x86_64
-          dnf info slirp4netns.x86_64
+
           
           
