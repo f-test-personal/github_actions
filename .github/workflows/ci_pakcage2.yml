@@ -23,6 +23,10 @@ jobs:
         with:
           name: hoge
           path: hoge.txt
+      - name: info
+        run:| 
+          dnf info jq.x86_64
+          dnf info oniguruma.x86_64
 
           
           
