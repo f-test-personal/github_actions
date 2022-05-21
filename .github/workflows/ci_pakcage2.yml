@@ -1,0 +1,16 @@
+name: CI Package 2 
+on: 
+#  push:
+  workflow_dispatch:
+
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    container:
+      image: registry.access.redhat.com/ubi8/ubi:8.5-239
+    steps:
+      - name: check-ubi-package
+        run: |
+          dnf install -y buildah-1:1.24.2-4.module+el8.6.0+14877+f643d2d6.x86_64
