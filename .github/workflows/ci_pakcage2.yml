@@ -1,4 +1,4 @@
-name: CI Package
+name: CI Package 2 
 on: 
 #  push:
   workflow_dispatch:
@@ -14,5 +14,3 @@ jobs:
       - name: check-ubi-package
         run: |
           dnf install -y buildah-1:1.24.2-4.module+el8.6.0+14877+f643d2d6.x86_64
-          dnf deplist buildah-1:1.24.2-4.module+el8.6.0+14877+f643d2d6.x86_64
-          yum list installed
