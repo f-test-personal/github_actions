@@ -13,4 +13,6 @@ jobs:
     steps:
       - name: check-ubi-package
         run: |
-          dnf install -y buildah-1:1.24.2-4.module+el8.6.0+14877+f643d2d6.x86_64
+          dnf install -y jq-1.6-3.el8
+          dnf deplist jq-1.6-3.el8
+          yum list installed
