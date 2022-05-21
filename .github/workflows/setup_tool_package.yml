@@ -28,6 +28,3 @@ jobs:
           # pip3 list installed
           pip3 install ansible
           pip3 list installed
-
-          
-      
