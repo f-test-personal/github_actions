@@ -37,7 +37,14 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: hoge
-          path: hoge.txt, info.txt
+          path: hoge.txt
+      - name: install artifact2
+        uses: actions/upload-artifact@v2
+        with:
+          name: hoge
+          path: info.txt
+          
+          
 #       - name: info
 #         run: | 
 #           dnf info jq.x86_64
