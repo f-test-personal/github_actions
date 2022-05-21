@@ -18,11 +18,26 @@ jobs:
           yum list installed
           yum list installed | awk '7<=NR && NR<=203 {print $1}' > hoge.txt
           cat hoge.txt
+          cat <<EOF > while.sh
+            #!/bin/bash
+            while read line
+            do
+              echo $line
+              yum info $line | sed -n "/Available Packages/q;p" > name.txt
+              grep Name name.txt >> info.txt
+              grep Version name.txt >> info.txt
+              grep Release name.txt >> info.txt
+              grep URL name.txt >> info.txt
+              grep License name.txt >> info.txt
+              echo " " >> info.txt
+            done <./hoge.txt
+          EOF
+          sh while.sh 
       - name: install artifact
         uses: actions/upload-artifact@v2
         with:
           name: hoge
-          path: hoge.txt
+          path: hoge.txt, info.txt
 #       - name: info
 #         run: | 
 #           dnf info jq.x86_64
