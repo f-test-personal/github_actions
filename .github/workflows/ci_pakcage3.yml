@@ -16,7 +16,7 @@ jobs:
           dnf install -y git-2.31.1-2.el8
           dnf deplist git-2.31.1-2.el8
           yum list installed
-          yum list installed | awk '7<=NR && NR<=203 {print $1}' > hoge.txt
+          yum list installed | awk '7<=NR && NR<=300 {print $1}' > hoge.txt
           cat hoge.txt
       - name: install artifact
         uses: actions/upload-artifact@v2
