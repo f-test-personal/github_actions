@@ -16,5 +16,6 @@ jobs:
             gradleVersion = '1.11'
             }
           EOF
-          gradle wrapper
+          curl -s https://get.sdkman.io | bash
+          sdk install gradle
         
