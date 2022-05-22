@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: registry.access.redhat.com/ubi8/ubi:8.5-239
+
     steps:
       - name: check-ubi-package
         run: |
