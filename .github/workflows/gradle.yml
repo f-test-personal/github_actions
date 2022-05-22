@@ -12,7 +12,7 @@ jobs:
        - name: check-ubi-package
          run: |
           apt update 
-          apt install gradle -y
+          apt install gradle=7.4.2 -y
           gradle wrapper
           cat <<EOF > build.gradle
             wrapper {
