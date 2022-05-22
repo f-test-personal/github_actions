@@ -3,27 +3,40 @@ on:
   push:
 
 jobs:
-  job1:
-    name: job1
+#   job1:
+#     name: job1
+#     runs-on: ubuntu-latest
+#     container:
+#       image: openjdk:11-jdk
+#     steps:  
+#        - name: check-ubi-package
+#          run: |
+#           apt update 
+#           apt install gradle=7.4.2 -y
+#           gradle wrapper
+#           cat <<EOF > build.gradle
+#             wrapper {
+#                 gradleVersion = '7.4.2'
+#             }
+#             dependencies {
+#                 testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+#             }
+#           EOF
+#           echo "-------------------------------------"
+#           ls 
+#           ./gradlew dependencies
+          
+  job2:
+    name: job2
     runs-on: ubuntu-latest
     container:
       image: openjdk:11-jdk
     steps:  
        - name: check-ubi-package
          run: |
-          apt update 
-          apt install gradle=7.4.2 -y
-          gradle wrapper
-          cat <<EOF > build.gradle
-            wrapper {
-                gradleVersion = '7.4.2'
-            }
-            dependencies {
-                testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
-            }
-          EOF
-          echo "-------------------------------------"
-          ls 
-          ./gradlew dependencies
-          
-
+          mkdir tmp
+          cd /tmp
+          wget https://downloads.gradle-dn.com/distributions/gradle-7.4.2-bin.zip
+          sudo unzip -d /opt/gradle gradle-7.4.2-bin.zip
+          cat /etc/profile.d/gradle.sh
+            
