@@ -12,5 +12,5 @@ jobs:
        - name: check-ubi-package
          run: |
           apt update 
-          apt install gradle
+          apt install gradle -y
 
