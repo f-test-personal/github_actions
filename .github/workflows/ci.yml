@@ -12,6 +12,7 @@ jobs:
        - name: check-ubi-package
          run: |
           yum install unzip -y
+          yum install zip -y
           curl -s https://get.sdkman.io | bash
           sdk install gradle
 #           cat <<EOF > build.gradle
