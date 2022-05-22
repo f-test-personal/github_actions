@@ -1,0 +1,33 @@
+name: CI Package 2 
+on: 
+#  push:
+  workflow_dispatch:
+
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    container:
+      image: registry.access.redhat.com/ubi8/ubi:8.5-239
+    steps:
+      - name: check-ubi-package
+        run: |
+          dnf install -y jq-1.6-3.el8
+          dnf deplist jq-1.6-3.el8
+          yum list installed
+          yum list installed | awk '7<=NR && NR<=203 {print $1}' > hoge.txt
+          cat hoge.txt
+      - name: install artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: hoge
+          path: hoge.txt
+      - name: info
+        run: | 
+          dnf info jq.x86_64
+          dnf info oniguruma.x86_64
+          echo hoge
+
+          
+          

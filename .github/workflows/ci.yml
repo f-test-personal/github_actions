@@ -1,6 +1,8 @@
 name: GitHub Actions Demo
 on: 
-  push:
+#  push:
+  workflow_dispatch:
+
 
 jobs:
   job1:
@@ -8,16 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: registry.access.redhat.com/ubi8/ubi:8.5-239
-    steps:  
-       - name: check-ubi-package
-         run: |
-          yum install unzip -y
-          yum install zip -y
-          curl -s https://get.sdkman.io | bash
-          source "/github/home/.sdkman/bin/sdkman-init.sh
-          sdk install gradle
-#           cat <<EOF > build.gradle
-#             task wrapper(type: Wrapper) {
-#             gradleVersion = '1.11'
-#             }
-#           EOF
+
+    steps:
+      - name: check-ubi-package
+        run: |
+          yum info audit-libs
+      
