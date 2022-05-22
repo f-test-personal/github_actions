@@ -37,6 +37,7 @@ jobs:
           mkdir tmp
           cd /tmp
           wget https://downloads.gradle-dn.com/distributions/gradle-7.4.2-bin.zip
+          apt install sudo -y
           sudo unzip -d /opt/gradle gradle-7.4.2-bin.zip
           cat /etc/profile.d/gradle.sh
             
