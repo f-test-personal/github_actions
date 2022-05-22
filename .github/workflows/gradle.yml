@@ -18,8 +18,12 @@ jobs:
             wrapper {
                 gradleVersion = '7.4.2'
             }
+            dependencies {
+                testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+            }
           EOF
           echo "-------------------------------------"
           ls 
+          ./gradlew dependencies
           
 
