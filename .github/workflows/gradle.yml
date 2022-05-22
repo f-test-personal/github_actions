@@ -42,8 +42,5 @@ jobs:
           sudo unzip -d /opt/gradle gradle-7.4.2-bin.zip
           ls
           echo "---------------------"
-          cd ./etc
-          ls
-          echo "---------------------"
-          cat /etc/profile.d/gradle.sh
+          cat /opt/gradle/etc/profile.d/gradle.sh
             
