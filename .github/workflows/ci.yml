@@ -11,11 +11,11 @@ jobs:
     steps:  
        - name: check-ubi-package
          run: |
-          cat <<EOF > build.gradle
-            task wrapper(type: Wrapper) {
-            gradleVersion = '1.11'
-            }
-          EOF
+          yum install unzip
           curl -s https://get.sdkman.io | bash
           sdk install gradle
-        
+#           cat <<EOF > build.gradle
+#             task wrapper(type: Wrapper) {
+#             gradleVersion = '1.11'
+#             }
+#           EOF
