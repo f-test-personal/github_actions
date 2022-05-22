@@ -40,5 +40,10 @@ jobs:
           apt update 
           apt install sudo -y
           sudo unzip -d /opt/gradle gradle-7.4.2-bin.zip
+          ls
+          echo "---------------------"
+          cd ./etc
+          ls
+          echo "---------------------"
           cat /etc/profile.d/gradle.sh
             
