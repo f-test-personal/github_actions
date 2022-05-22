@@ -11,6 +11,6 @@ jobs:
     steps:  
        - name: check-ubi-package
          run: |
-          apt install unzip -y
+          apt update 
           apt install gradle
 
