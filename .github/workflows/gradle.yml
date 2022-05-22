@@ -14,5 +14,12 @@ jobs:
           apt update 
           apt install gradle -y
           gradle wrapper
+          cat <<EOF > build.gradle
+            wrapper {
+                gradleVersion = '7.4.2'
+            }
+          EOF
+          echo "-------------------------------------"
+          ls 
           
 
