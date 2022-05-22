@@ -13,4 +13,6 @@ jobs:
          run: |
           apt update 
           apt install gradle -y
+          gradle wrapper
+          
 
