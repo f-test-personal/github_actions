@@ -25,10 +25,10 @@ jobs:
           pycparser==2.21
           pipdeptree
           EOF
-          # pip3 install -r requirement.txt 
-          # pip3 list installed
-          pip3 install ansible
+          pip3 install -r requirement.txt 
           pip3 list installed
+          # pip3 install ansible
+          # pip3 list installed
           echo "------------------------------------"
           pipdeptree
           echo "------------------------------------"
