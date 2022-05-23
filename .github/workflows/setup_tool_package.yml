@@ -33,3 +33,9 @@ jobs:
           pipdeptree
           echo "------------------------------------"
           pipdeptree -r 
+          echo "------------------------------------"
+          pipdeptree -p Jinja2
+          echo "------------------------------------"
+          pipdeptree -p MarkupSafe
+          echo "------------------------------------"
+          pipdeptree -p pycparser
